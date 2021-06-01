@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/pacientesFragment">
+
+    <fragment
+        android:id="@+id/pacientesFragment"
+        android:name="com.example.pacientes_v1.PacientesFragment"
+        android:label="Pacientes"
+        tools:layout="@layout/fragment_pacientes" >
+        <action
+            android:id="@+id/action_pacientesFragment_to_agregarFragment"
+            app:destination="@id/agregarFragment" />
+        <action
+            android:id="@+id/action_pacientesFragment_to_actualizarPacientes"
+            app:destination="@id/actualizarPacientes" />
+    </fragment>
+    <fragment
+        android:id="@+id/agregarFragment"
+        android:name="com.example.pacientes_v1.AgregarFragment"
+        android:label="Agregar paciente"
+        tools:layout="@layout/fragment_agregar" />
+    <fragment
+        android:id="@+id/actualizarPacientes"
+        android:name="com.example.pacientes_v1.ActualizarPacientes"
+        android:label="Actualizar Pacientes"
+        tools:layout="@layout/fragment_actualizar_pacientes" >
+        <action
+            android:id="@+id/action_actualizarPacientes_to_actualizarPacienteFragment"
+            app:destination="@id/actualizarPacienteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/actualizarPacienteFragment"
+        android:name="com.example.pacientes_v1.ActualizarPacienteFragment"
+        android:label="Actualizar Paciente"
+        tools:layout="@layout/fragment_actualizar_paciente" />
+
+</navigation>
